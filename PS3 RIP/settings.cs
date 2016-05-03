@@ -1,0 +1,399 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PS3_RIP
+{
+    public partial class settings : Form
+    {
+        public settings()
+        {
+            InitializeComponent();
+        }
+
+        #region << Full List >>
+
+        string fulllist = @"-*\EBOOT.SP.BIN
+*\esp\*
+*\spn\*
+*\esn\*
+*\es\*
+*\sp\*
+*\spa\*
+*\deu\*
+*\fra\*
+*\ita\*
+*\jpn\*
+*.ESP.*
+*.ESN.*
+*.SPN.*
+*.ES.*
+*.SP.*
+*.esp_*
+*.es_*
+*.esn_*
+*.spn_*
+*.spa_*
+*.sp_*
+*.DEU.*
+*.FRA.*
+*.ITA.*
+*.XVAG
+*.cn.*
+*.de.*
+*.gb.*
+*.deu_*
+*.dk.*
+*.fi.*
+*.fr.*
+*.fra_*
+*.it.*
+*.ita_*
+*.jp.*
+*.kr.*
+*.nl.*
+*.no.*
+*.pal.m2v
+*.pt.*
+*.se.*
+*\DE\*
+*\ge\*
+*\DIALOGES\*
+*\DIALOGSP\*
+*\DIALOGESN\*
+*\DIALOGSPA\*
+*\DIALOGESP\*
+*\DIALOGSPN\*
+*\DIALOGDE\*
+*\DIALOGFR\*
+*\DIALOGIT\*
+*\DIALOGNL\*
+*\FRA\*
+*\FRENCH\*
+*\FR\*
+*\Fra\*
+*\French(France)\*
+*\french(france)\*
+*\FRENCH(FRANCE)\*
+*\French\*
+*\GERMAN\*
+*\GER\*
+*\Ger\*
+*\German\*
+*\SPANISH\*
+*\SPA\*
+*\SPN\*
+*\ESP\*
+*\ES\*
+*\ESN\*
+*\ITALIAN\*
+*\ITA\*
+*\IT\*
+*\Italian\*
+*\JP\*
+*\Localization\*.deu
+*\Localization\*.fra
+*\Localization\*.ita
+*\Localization\*.jpn
+*\Localization\*.esp
+*\Localization\*.esn
+*\Localization\*.spn
+*\Localization\*.spa
+*\PL\*
+*\PS3_EXTRA\*\DATA000.MP4
+*\RU\*
+*\Rus\*
+*\_french\*
+*\chinese\*
+*\cutscene\*_c.bik
+*\cutscene\*_e.bik
+*\cutscene\*_l.bik
+*\danish\*
+*\de-*.fbrb
+*\de-de\*
+*\de\*
+*\dutch\*
+*\finnish\*
+*\fr-*.fbrb
+*\fr-fr\*
+*\fr\*
+*\fra_*
+*\fre\*
+*\french\*
+*\ger\*
+*\german\*
+*\it-*.fbrb
+*\it-it\*
+*\it\*
+*\italian\*
+*\Italien\*
+*\japanese\*
+*\korean\*
+*\localizeddeu.lbf
+*\localizedfra.lbf
+*\localizedita.lbf
+*\localizedspa.lbf
+*\localizedspn.lbf
+*\localizedesp.lbf
+*\localizedesn.lbf
+*\movies\2500\*
+*\norwegian\*
+*\pad.file
+*\pl-*.fbrb
+*\polish\*
+*\portuguese\*
+*\psarc\spanish*.psarc
+*\psarc\brazilian*.psarc
+*\psarc\chinese*.psarc
+*\psarc\dutch*.psarc
+*\psarc\french*.psarc
+*\psarc\german*.psarc
+*\psarc\italian*.psarc
+*\psarc\japanese*.psarc
+*\psarc\korean*.psarc
+*\psarc\polish*.psarc
+*\psarc\portuguese*.psarc
+*\psarc\russian*.psarc
+*\psarc\turkish*.psarc
+*\ru-*.fbrb
+*\russian\*
+*\scej\*
+*\sds_es\*
+*\sds_esn\*
+*\sds_sp\*
+*\sds_de\*
+*\sds_fr\*
+*\sds_it\*
+*\swe\*
+*\swedish\*
+*\tv_*.pam
+*\3d\*
+*_3D.MP4
+*_3d.avi
+*_3D_?.MP4
+*_50.avi
+*_CHINESE_TRADITIONAL.SUB
+*_SPANISH.SUB
+*_ES.*
+*_ESN.*
+*_ESP.*
+*_SP.*
+*_SPN.*
+*_SPA.*
+*_DANISH.SUB
+*_DE.*
+*_DEU.*
+*_DEU_*
+*_DUT.*
+*_DUTCH.SUB
+*_F.bik
+*_FINNISH.SUB
+*_FR.*
+*_FRA.*
+*_FRA_*
+*_FRE.*
+*_FRENCH.*
+*_FRE_PAL.*
+*_French.*
+*_G.bik
+*_GER.*
+*_GERMAN.*
+*_GER_PAL.*
+*_German.*
+*_I.bik
+*_IT.*
+*_ITA.*
+*_ITALIAN.*
+*_ITA_*
+*_ITA_PAL.*
+*_Italian.*
+*_JA.*
+*_JAPANESE.SUB
+*_KOREAN.SUB
+*_LATAMPOR.SUB
+*_NORWEGIAN.SUB
+*_POL.*
+*_POLISH.SUB
+*_POL_*
+*_PORTUGUESE.SUB
+*_RUS.*
+*_RUSSIAN.SUB
+*_RUS_*
+*_SWEDISH.SUB
+*_TUR.SUB
+*_es.xvag
+*_esn.xvag
+*_sp.xvag
+*_spanish.*
+*_au.xvag
+*_australian.*
+*_de-*.fbrb
+*_de.xvag
+*_deu.*
+*_dutch.*
+*_fr-*.fbrb
+*_fr.*
+*_fr.arc
+*_fra.*
+*_fre.*
+*_fre\*
+*_french.*
+*_ge.*
+*_ge.arc
+*_ger.*
+*_ger\*
+*_german.*
+*_it-*.fbrb
+*_it.*
+*_it.arc
+*_ita.*
+*_ita\*
+*_italian.*
+*_jap.*
+*_jap\*
+*_jp.*
+*_nl.xvag
+*_pal.vp6
+*_pl-*.fbrb
+*_po.xvag
+*_polish.*
+*_portuguese.*
+*_pt.xvag
+*_ru-*.fbrb
+*_ru.xvag
+*_russian.*
+*_scej.bik
+*_scek.bik
+*\*_de-00.fbrb
+*\*_es-00.fbrb
+*\*_esn-00.fbrb
+*\*_sp-00.fbrb
+*\*_fr-00.fbrb
+*\*_it-00.fbrb
+*\*_pl-00.fbrb
+*\*_ru-00.fbrb
+*\de-00.fbrb
+*\sp-00.fbrb
+*\es-00.fbrb
+*\esn-00.fbrb
+*\fr-00.fbrb
+*\it-00.fbrb
+*\pl-00.fbrb
+*\ru-00.fbrb
+*\PS3_GAME\USRDIR\f\*.ps3
+*_NOR.*
+*_SWE.*
+*_DAN.*
+*-FRA_SF.XXX
+*-DEU_SF.XXX
+*-ITA_SF.XXX
+*-PRT_SF.XXX
+*_french\*
+*_german\*
+*_russian\*
+*_spanish\*
+*.pl.*
+*_de.*
+*.ru.*
+*_ru.*
+*_cn.psarc
+*_cn2.psarc
+*_dk.psarc
+*_es.psarc
+*_es2.psarc
+*_fi.psarc
+*_fi2.psarc
+*_kr.psarc
+*_kr2.psarc
+*_gb.psarc
+*_gb2.psarc
+*_pl.psarc
+*_pl2.psarc
+*_pt.psarc
+*_pt2.psarc
+*_nl.psarc
+*_nl2.psarc
+*_no.psarc
+*_no2.psarc
+*_se.psarc
+*_se2.psarc
+*_de2.psarc
+*_ru2.psarc
+*_fr2.psarc
+*_it2.psarc
+*_jp2.psarc
+*_de2.psarc
+*\movies\3d_*
+*\movie\3d_*
+*-3d.m2v
+*_GE.*
+*.GEBE
+*.FRBE
+*.ITBE
+*\dut\*
+*\dut.*
+*_dut_*.*
+*_fre_*.*
+*\fre.*
+*_ita_*.*
+*\ita.*
+*_ger_*.*
+*\ger.*
+*_pol.*
+*_por.*
+*_rus.*
+*_Fre.*
+*_Ita.*
+*_Ger.*
+*_Spa.*
+*.ITA
+*.DEU
+*.FRA
+*.ESN
+*_FR_*
+*_GR_*
+*_IT_*
+*_DUTCH.*
+*_PORTUGUESE.*";
+        #endregion << Full List >>
+
+        private void btnShowHide_Click(object sender, EventArgs e)
+        {
+            if (splitContainer2.Panel1Collapsed == true)
+            {
+
+                splitContainer2.Panel1Collapsed = false;
+                btnShowHide.Text = "-";
+                btnShowHide.ForeColor = Color.Red;
+            }
+            else
+            {
+                splitContainer2.Panel1Collapsed = true;
+                btnShowHide.Text = "+";
+                btnShowHide.ForeColor = Color.Green;
+            }
+        }
+
+        private void buildlist()
+        {
+            string[] listsplit = fulllist.Split('\n');
+            foreach(var item in listsplit)
+            {
+                lbxPatterns.Items.Add(item);
+            }
+
+        }
+
+        private void settings_Load(object sender, EventArgs e)
+        {
+            splitContainer2.Panel1Collapsed = true;
+            buildlist();
+        }
+    }
+}
