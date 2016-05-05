@@ -19,7 +19,7 @@ namespace PS3_RIP
 
         #region << Full List >>
 
-        string fulllist = @"-*\EBOOT.SP.BIN
+        public string fulllist = @"*\EBOOT.SP.BIN
 *\esp\*
 *\spn\*
 *\esn\*
